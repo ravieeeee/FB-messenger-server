@@ -8,7 +8,7 @@ app.post('/sendMessage', (req, res) => {
   const recipient = req.query.recipient
   if (!message || !recipient) return
 
-  const command = 'npx messer --command=\'m "' + recipient + '" ' + message + '\''
+  const command = `npx messer --command=\'m "${recipient}" ${message}\'`
   console.log(command)
 
   exec(command, (error, stdout, stderr) => {
