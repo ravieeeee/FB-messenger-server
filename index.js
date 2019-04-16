@@ -3,6 +3,34 @@ const app = express()
 const port = 3000
 const exec = require('child_process').exec
 const ip = require('ip')
+const path = require('path')
+const Messen = require('messen')
+const fs = require('fs')
+
+app.post('/login', (req, res) => {
+  const MESSY_PATH = path.resolve(process.env.HOME, '.messen')
+  const APPSTATE_FILE_PATH = path.resolve(MESSY_PATH, 'tmp/appstate.json')
+  console.log('APPSTATE_FILE_PATH', APPSTATE_FILE_PATH)
+
+  fs.readFile(APPSTATE_FILE_PATH, (err, rawAppState) => {
+    if (err) {
+      console.log('try login')
+      const messen = new Messen()
+      messen.login({
+        email: req.query.email,
+        password: req.query.password
+      }).then(() => {
+        console.log('login finish')
+        res.send('login finish')
+      }).catch((err) => {
+        console.log(err)
+      })
+    } else {
+      console.log('already login')
+      res.send('already login')
+    }
+  })
+})
 
 app.post('/sendMessage', (req, res) => {
   const content = req.query.content

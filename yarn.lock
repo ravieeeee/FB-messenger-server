@@ -711,7 +711,7 @@ merge-descriptors@1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/merge-descriptors/-/merge-descriptors-1.0.1.tgz#b00aaa556dd8b44568150ec9d1b953f3f90cbb61"
 
-messen@0.0.5:
+messen@0.0.5, messen@^0.0.5:
   version "0.0.5"
   resolved "https://registry.yarnpkg.com/messen/-/messen-0.0.5.tgz#2ef22fb3fa4ae3e7e662e50fa9d56bbead06a7db"
   dependencies:
