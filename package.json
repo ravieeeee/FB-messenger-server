@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "express": "^4.16.4",
+    "ip": "^1.1.5",
     "messer": "0.5.0"
   }
 }

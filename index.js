@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 const port = 3000
 const exec = require('child_process').exec
+const ip = require('ip')
 
 app.post('/sendMessage', (req, res) => {
   const content = req.query.content
@@ -24,4 +25,4 @@ app.post('/sendMessage', (req, res) => {
   })
 })
 
-app.listen(port, () => console.log(`listening on port ${port}!`))
+app.listen(port, () => console.log(`http://${ip.address()}:${port}`))
