@@ -711,7 +711,19 @@ merge-descriptors@1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/merge-descriptors/-/merge-descriptors-1.0.1.tgz#b00aaa556dd8b44568150ec9d1b953f3f90cbb61"
 
-messen@0.0.5, messen@^0.0.5:
+messen@1.0.0-beta.5:
+  version "1.0.0-beta.5"
+  resolved "https://registry.yarnpkg.com/messen/-/messen-1.0.0-beta.5.tgz#915c007f23f44d60718b49ebfb2fec98828fc4cf"
+  integrity sha512-j6n9/OSLyowwnEteLq0EbiGhX5cIBpHMRm+JKXZhhBvRrR7fdtz2+nq19HEE4Oh5KdlHuaUrC9U1xNFLQRLfKQ==
+  dependencies:
+    dotenv "^6.2.0"
+    facebook-chat-api "github:Schmavery/facebook-chat-api"
+    mkdirp "^0.5.1"
+    prompt "^1.0.0"
+    readline "^1.3.0"
+    winston "^3.1.0"
+
+messen@^0.0.5:
   version "0.0.5"
   resolved "https://registry.yarnpkg.com/messen/-/messen-0.0.5.tgz#2ef22fb3fa4ae3e7e662e50fa9d56bbead06a7db"
   dependencies:
@@ -722,12 +734,13 @@ messen@0.0.5, messen@^0.0.5:
     readline "^1.3.0"
     winston "^3.1.0"
 
-messer@0.5.0:
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/messer/-/messer-0.5.0.tgz#c0ffe024739691f26aa7bd2b49e85d6a37db2468"
+messer@0.5.1:
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/messer/-/messer-0.5.1.tgz#496126757de143cfbe6e3a7b3fda0612471034e9"
+  integrity sha512-675rn67IEHgn4PuFadffFqYe/Y8SA8iEvspW75KP5EG46KQ9eFxv6a7ZnDuUDoS5/HUZVAKTXgxL6EqLWPmhog==
   dependencies:
     chalk "^2.4.2"
-    messen "0.0.5"
+    messen "1.0.0-beta.5"
     minimist "^1.2.0"
     mkdirp "^0.5.1"
     prompt "^1.0.0"
