@@ -53,4 +53,19 @@ app.post('/sendMessage', (req, res) => {
   })
 })
 
+app.get('/fetchMessages', (req, res) => {
+  const target = req.query.target
+  if (!target) return
+
+  const command = `npx messer --command=\'h "${target}" 10\'`
+  console.log(command)
+
+  exec(command, (error, stdout, stderr) => {
+    if (!!stdout) { console.log('stdout : ', stdout) }
+    if (!!stderr) { console.log('stderr : ', stderr) }
+    if (!!error) { console.log('error : ', error) }
+    res.send('done')
+  })
+})
+
 app.listen(port, () => console.log(`http://${ip.address()}:${port}`))
